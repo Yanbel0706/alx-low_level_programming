@@ -7,7 +7,7 @@
  ** Return: value of (base ^ power)
  **/
 unsigned long int powerfunc(unsigned int base, unsigned int power)
-{ 
+{
 unsigned long int number;
 unsigned int count;
 number = 1;
@@ -28,12 +28,14 @@ carac = 0;
 div = powerfunc(2, sizeof(unsigned long int) * 8 - 1);
 while (div != 0)
 {
-   check = n & div;											if (check == div)
+check = n & div;
+if (check == div)
 {
-      carac = 1;											     _putchar('1');											}
+carac = 1;
+_putchar('1'); }
 else if (carac == 1 || div == 1)
-{	
-     _putchar('0');}
-     div >>= 1;
+{
+_putchar('0'); }
+div >>= 1;
 }
 }
