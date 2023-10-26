@@ -11,9 +11,13 @@ unsigned long int number;
 unsigned int c;
 number = 1;
 for (c = 1; c <= power; c++)
-  number *= base;
-  return (number);
+  {	
+  number *= base; 
+  } 
+  
+return (number);
 }
+
 /**
  ** print_binary - prints a number in binary notation
  ** @n: number to print
