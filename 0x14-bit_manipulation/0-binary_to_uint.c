@@ -1,6 +1,6 @@
 #include "main.h"
 /*
-*binary_to_uint - program which convert a binary number to an unsigned int
+*binary_to_uint - function that converts a binary number to an unsigned int
 **@b: pointer to a string which contains a binary number
 **Return: unsigned int with decimal value r or to 0 if error
 **/
