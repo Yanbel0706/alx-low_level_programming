@@ -1,49 +1,47 @@
 #include "main.h"
 
 /**
- *  * _pow - func calculates (base ^ power)
- *   * @base: base of the exponent
- *    * @power: power of the exponent
- *     *
- *      * Return: value of (base ^ power)
- *       */
-unsigned long int _pow(unsigned int base, unsigned int power)
+ ** powerfunc - func calculates (base ^ power)
+ ** @base: the base of the exponent
+ ** @power: the power of exponent
+ ** Return: value of (base ^ power)
+ **/
+unsigned long int powerfunc(unsigned int base, unsigned int power)
 {
-		unsigned long int num;
-			unsigned int a;
+		unsigned long int number;
+			unsigned int count;
 
-				num = 1;
-					for (a = 1; a <= power; a++)
-								num *= base;
-						return (num);
+				number = 1;
+					for (count = 1; count <= power; count++)
+								number *= base;
+						return (number);
 }
 
 /**
- *  * print_binary - prints a number in binary notation
- *   * @n: number to print
- *    *
- *     * Return: void
- *      */
+ ** print_binary - prints a number in binary notation
+ ** @n: number to print
+ ** Return: void
+ **/
 void print_binary(unsigned long int n)
 {
-		unsigned long int divisor, check;
-			char flag;
+		unsigned long int div, check;
+			char carac;
 
-				flag = 0;
-					divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
-						while (divisor != 0)
+				carac = 0;
+					div = powerfunc(2, sizeof(unsigned long int) * 8 - 1);
+						while (div != 0)
 								{
-											check = n & divisor;
-													if (check == divisor)
+											check = n & div;
+													if (check == div)
 																{
-																				flag = 1;
+																				carac = 1;
 																							_putchar('1');
 																									}
-															else if (flag == 1 || divisor == 1)
+															else if (carac == 1 || div == 1)
 																		{
 																						_putchar('0');
 																								}
-																	divisor >>= 1;
+																	div >>= 1;
 																		}
 }
 
